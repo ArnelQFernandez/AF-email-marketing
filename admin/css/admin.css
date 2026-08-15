@@ -1,0 +1,206 @@
+/* ── AF Email Marketing — Admin Styles ── */
+
+/* ── Page wrapper ── */
+.af-wrap {
+    max-width: 1100px;
+}
+
+/* ── Stat boxes ── */
+.af-stats {
+    display: flex;
+    gap: 16px;
+    margin: 20px 0 24px;
+    flex-wrap: wrap;
+}
+
+.af-stat-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 28px;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+
+.af-stat-number {
+    display: block;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #0073aa;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.af-stat-label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/* ── Status badges ── */
+.af-status {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+.af-status-active       { background: #d4edda; color: #155724; }
+.af-status-unsubscribed { background: #e2e3e5; color: #495057; }
+.af-status-draft        { background: #fff3cd; color: #856404; }
+.af-status-sent         { background: #cce5ff; color: #004085; }
+
+/* ── Table tweaks ── */
+.af-table th { font-weight: 600; }
+
+.af-btn-delete {
+    color: #b30000 !important;
+    border-color: #b30000 !important;
+}
+.af-btn-delete:hover {
+    background: #b30000 !important;
+    color: #fff !important;
+}
+
+/* ── Pagination ── */
+.af-pagination {
+    margin: 20px 0;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* ── Newsletter two-column layout ── */
+.af-newsletter-layout {
+    display: flex;
+    gap: 28px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.af-newsletter-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.af-newsletter-compose {
+    flex: 1;
+    min-width: 0;
+}
+
+.af-new-btn {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Sidebar list */
+.af-newsletter-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.af-newsletter-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.af-newsletter-list li:last-child { border-bottom: none; }
+
+.af-newsletter-list li a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #333;
+    transition: background .15s;
+}
+
+.af-newsletter-list li a:hover,
+.af-newsletter-list li.active a {
+    background: #f0f6fc;
+    color: #0073aa;
+}
+
+.af-newsletter-list li.active a { font-weight: 600; }
+
+.af-nl-meta {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* ── Compose area ── */
+.af-field {
+    margin-bottom: 18px;
+}
+
+.af-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.af-form-actions {
+    margin-top: 12px;
+}
+
+/* ── Send section ── */
+.af-send-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.af-send-info {
+    margin: 0;
+    color: #555;
+    font-size: 13px;
+}
+
+.af-test-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.af-send-all-btn {
+    min-width: 200px;
+    justify-content: center;
+}
+
+/* ── Settings page ── */
+.form-table td .description {
+    margin-top: 4px;
+}
+
+.form-table td code {
+    background: #f1f1f1;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 800px) {
+    .af-newsletter-layout {
+        flex-direction: column;
+    }
+
+    .af-newsletter-sidebar {
+        width: 100%;
+    }
+
+    .af-newsletter-list {
+        display: none; /* hide on mobile to save space — user can navigate via New button */
+    }
+}
